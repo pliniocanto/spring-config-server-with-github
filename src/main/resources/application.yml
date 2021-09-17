@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: spring-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/pliniocanto/spring-config-server-with-github-configfiles
+          #username: username
+          #password: password
+          default-label: main
+          search-paths:
+          - 'greeting-service*'
